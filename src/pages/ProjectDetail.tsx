@@ -4,6 +4,7 @@ import { useParams, Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { ArrowLeft, ExternalLink, Github } from 'lucide-react';
+import ScrollToTop from '../components/ScrollToTop';
 
 interface ProjectData {
   id: string;
@@ -42,12 +43,14 @@ const ProjectDetail = () => {
         'Mobile-responsive design for on-the-go management'
       ],
       technologies: [
-        'React.js for frontend development',
+        'HTML5 and CSS3 for structure and styling',
+        'JavaScript for interactive elements',
+        'React.js for building the user interface',
         'Node.js and Express for backend APIs',
         'MongoDB for data storage',
         'Socket.IO for real-time updates',
         'Chart.js for visual analytics',
-        'Twilio for SMS notifications'
+        'Responsive design principles for all device types'
       ],
       demoUrl: 'https://cage-system-demo.com',
       githubUrl: 'https://github.com/username/cage-system',
@@ -74,12 +77,13 @@ const ProjectDetail = () => {
         'Tenant portal for managing all aspects of their rental'
       ],
       technologies: [
-        'Next.js for server-side rendering',
-        'Express.js backend APIs',
-        'PostgreSQL database with complex relational data',
+        'HTML5 and CSS3 for structure and styling',
+        'JavaScript and React for dynamic UI components',
+        'PHP for server-side processing',
+        'MySQL database for data management',
+        'Responsive design with Tailwind CSS',
         'AWS S3 for document and image storage',
         'Stripe integration for payment processing',
-        'Mapbox for property location visualization',
         'SendGrid for email notifications'
       ],
       demoUrl: 'https://rentconnect-demo.com',
@@ -107,13 +111,14 @@ const ProjectDetail = () => {
         'Customer review and loyalty program system'
       ],
       technologies: [
-        'React Native for cross-platform mobile development',
-        'Firebase for backend services and real-time database',
+        'HTML5 and CSS3 for the web interface',
+        'JavaScript with React for frontend development',
+        'Python for backend services and data processing',
+        'RESTful API architecture',
+        'Firebase for real-time database and authentication',
         'Stripe for payment processing',
         'Google Maps API for location services',
-        'Push notifications for booking updates',
-        'Twillio for SMS verification',
-        'Analytics dashboard for business intelligence'
+        'Responsive design for mobile and desktop access'
       ],
       demoUrl: 'https://carhire-app-demo.com',
       githubUrl: 'https://github.com/username/car-hire-app',
@@ -239,10 +244,10 @@ const ProjectDetail = () => {
     return (
       <>
         <Navbar />
-        <main className="pt-20 min-h-screen">
+        <main className="pt-20 min-h-screen bg-black text-white">
           <div className="container mx-auto px-4 py-12">
             <div className="flex justify-center items-center h-64">
-              <div className="animate-pulse text-portfolio-burgundy">Loading project details...</div>
+              <div className="animate-pulse text-green-500">Loading project details...</div>
             </div>
           </div>
         </main>
@@ -255,14 +260,14 @@ const ProjectDetail = () => {
     return (
       <>
         <Navbar />
-        <main className="pt-20 min-h-screen">
+        <main className="pt-20 min-h-screen bg-black text-white">
           <div className="container mx-auto px-4 py-12">
             <div className="text-center">
-              <h1 className="text-3xl font-bold text-portfolio-navy mb-4">Project Not Found</h1>
-              <p className="text-gray-600 mb-8">The project you're looking for doesn't exist or has been removed.</p>
+              <h1 className="text-3xl font-bold text-white mb-4">Project Not Found</h1>
+              <p className="text-gray-400 mb-8">The project you're looking for doesn't exist or has been removed.</p>
               <Link 
                 to="/projects" 
-                className="btn-gradient px-6 py-2 rounded-full font-medium inline-flex items-center"
+                className="bg-green-500 hover:bg-green-600 text-black px-6 py-2 rounded-full font-medium inline-flex items-center"
               >
                 <ArrowLeft size={18} className="mr-2" /> Back to Projects
               </Link>
@@ -277,13 +282,13 @@ const ProjectDetail = () => {
   return (
     <>
       <Navbar />
-      <main className="pt-20">
+      <main className="pt-20 bg-black">
         {/* Hero Section */}
         <section 
           className="relative h-[40vh] md:h-[50vh] bg-cover bg-center"
           style={{ backgroundImage: `url(${project.image})` }}
         >
-          <div className="absolute inset-0 bg-portfolio-navy/70"></div>
+          <div className="absolute inset-0 bg-black/70"></div>
           <div className="absolute inset-0 flex items-center">
             <div className="container mx-auto px-4">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">{project.title}</h1>
@@ -291,7 +296,7 @@ const ProjectDetail = () => {
                 {project.tags.map((tag, index) => (
                   <span 
                     key={index} 
-                    className="text-sm font-medium px-3 py-1 rounded-full bg-white/20 text-white backdrop-blur-sm"
+                    className="text-sm font-medium px-3 py-1 rounded-full bg-green-500/20 text-green-400 backdrop-blur-sm"
                   >
                     {tag}
                   </span>
@@ -303,20 +308,20 @@ const ProjectDetail = () => {
         </section>
         
         {/* Project Details */}
-        <section className="py-16">
+        <section className="py-16 bg-black text-white">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
               <div className="lg:col-span-2">
                 <div className="mb-12">
-                  <h2 className="text-3xl font-bold text-portfolio-navy mb-6">Overview</h2>
-                  <p className="text-gray-700 leading-relaxed mb-6">
+                  <h2 className="text-3xl font-bold text-white mb-6">Overview</h2>
+                  <p className="text-gray-300 leading-relaxed mb-6">
                     {project.longDescription}
                   </p>
                 </div>
                 
                 {project.gallery && (
                   <div className="mb-12">
-                    <h2 className="text-3xl font-bold text-portfolio-navy mb-6">Gallery</h2>
+                    <h2 className="text-3xl font-bold text-white mb-6">Gallery</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       {project.gallery.map((image, index) => (
                         <div key={index} className="rounded-lg overflow-hidden shadow-md">
@@ -332,8 +337,8 @@ const ProjectDetail = () => {
                 )}
                 
                 <div className="mb-12">
-                  <h2 className="text-3xl font-bold text-portfolio-navy mb-6">Features</h2>
-                  <ul className="list-disc list-inside space-y-2 text-gray-700">
+                  <h2 className="text-3xl font-bold text-white mb-6">Features</h2>
+                  <ul className="list-disc list-inside space-y-2 text-gray-300">
                     {project.features.map((feature, index) => (
                       <li key={index}>{feature}</li>
                     ))}
@@ -341,8 +346,8 @@ const ProjectDetail = () => {
                 </div>
                 
                 <div>
-                  <h2 className="text-3xl font-bold text-portfolio-navy mb-6">Technologies</h2>
-                  <ul className="list-disc list-inside space-y-2 text-gray-700">
+                  <h2 className="text-3xl font-bold text-white mb-6">Technologies</h2>
+                  <ul className="list-disc list-inside space-y-2 text-gray-300">
                     {project.technologies.map((tech, index) => (
                       <li key={index}>{tech}</li>
                     ))}
@@ -351,8 +356,8 @@ const ProjectDetail = () => {
               </div>
               
               <div className="lg:col-span-1">
-                <div className="bg-white p-6 rounded-lg shadow-md sticky top-28">
-                  <h3 className="text-xl font-bold text-portfolio-navy mb-6 pb-4 border-b">Project Information</h3>
+                <div className="bg-gray-800 p-6 rounded-lg shadow-md sticky top-28 border border-gray-700">
+                  <h3 className="text-xl font-bold text-white mb-6 pb-4 border-b border-gray-700">Project Information</h3>
                   
                   <div className="space-y-6">
                     {project.demoUrl && (
@@ -360,7 +365,7 @@ const ProjectDetail = () => {
                         href={project.demoUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="btn-gradient w-full py-3 rounded-lg font-medium inline-flex items-center justify-center"
+                        className="bg-green-500 hover:bg-green-600 w-full py-3 rounded-lg font-medium inline-flex items-center justify-center text-black"
                       >
                         Live Demo <ExternalLink size={18} className="ml-2" />
                       </a>
@@ -371,19 +376,19 @@ const ProjectDetail = () => {
                         href={project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-full py-3 rounded-lg font-medium bg-gray-100 text-gray-800 hover:bg-gray-200 transition-colors inline-flex items-center justify-center"
+                        className="w-full py-3 rounded-lg font-medium bg-gray-700 text-gray-200 hover:bg-gray-600 transition-colors inline-flex items-center justify-center"
                       >
                         View Source <Github size={18} className="ml-2" />
                       </a>
                     )}
                     
-                    <div className="pt-6 border-t">
-                      <h4 className="font-medium text-portfolio-navy mb-3">Technologies</h4>
+                    <div className="pt-6 border-t border-gray-700">
+                      <h4 className="font-medium text-white mb-3">Technologies</h4>
                       <div className="flex flex-wrap gap-2">
                         {project.tags.map((tag, index) => (
                           <span 
                             key={index} 
-                            className="text-sm px-3 py-1 rounded-full bg-gray-100 text-gray-700"
+                            className="text-sm px-3 py-1 rounded-full bg-gray-700 text-gray-300"
                           >
                             {tag}
                           </span>
@@ -398,13 +403,14 @@ const ProjectDetail = () => {
             <div className="mt-16 text-center">
               <Link 
                 to="/projects" 
-                className="btn-gradient px-8 py-3 rounded-full font-medium inline-flex items-center"
+                className="bg-green-500 hover:bg-green-600 px-8 py-3 rounded-full font-medium inline-flex items-center text-black"
               >
                 <ArrowLeft size={18} className="mr-2" /> Back to Projects
               </Link>
             </div>
           </div>
         </section>
+        <ScrollToTop />
       </main>
       <Footer />
     </>
