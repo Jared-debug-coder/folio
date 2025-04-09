@@ -13,11 +13,11 @@ const HeroSection = () => {
           <div className="md:w-1/2 md:pr-12 mb-10 md:mb-0">
             <div className="animate-fade-in">
               <h1 className="text-4xl lg:text-6xl font-bold mb-6 text-portfolio-navy">
-                Full-Stack <span className="text-portfolio-burgundy">Developer</span>
+                Jared <span className="text-portfolio-burgundy">Mogonchi</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Creating innovative web solutions and bringing digital ideas to life. 
-                Specialized in modern web technologies and responsive design.
+                Full-Stack Developer creating innovative web solutions and bringing digital ideas to life. 
+                Specialized in HTML, CSS, JavaScript, React, C/C++, Python, Java, and PHP.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/projects" className="btn-gradient px-8 py-3 rounded-full font-medium inline-flex items-center justify-center">

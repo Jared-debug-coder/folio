@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { ChevronDown, Code, Server, Globe, PenTool } from 'lucide-react';
+import { ChevronDown, Code, Server, Globe, PenTool, ArrowRight } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import ProjectCard from '../components/ProjectCard';
 import Navbar from '../components/Navbar';

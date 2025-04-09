@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -10,11 +9,11 @@ const About = () => {
     { name: 'HTML/CSS', percentage: 95 },
     { name: 'JavaScript', percentage: 90 },
     { name: 'React.js', percentage: 85 },
-    { name: 'Node.js', percentage: 80 },
-    { name: 'TypeScript', percentage: 75 },
-    { name: 'MongoDB', percentage: 85 },
-    { name: 'PostgreSQL', percentage: 80 },
-    { name: 'UI/UX Design', percentage: 70 }
+    { name: 'PHP', percentage: 80 },
+    { name: 'Python', percentage: 75 },
+    { name: 'Java', percentage: 70 },
+    { name: 'C/C++', percentage: 75 },
+    { name: 'UI/UX Design', percentage: 80 }
   ];
 
   const experiences = [
@@ -77,15 +76,14 @@ const About = () => {
                 <div className="h-1 w-20 bg-portfolio-burgundy mb-6"></div>
                 
                 <p className="text-gray-700 mb-4">
-                  I am a passionate full-stack developer with extensive experience in building web applications
-                  and digital solutions. My journey in web development started over 5 years ago, and since then,
-                  I've worked on various projects ranging from small business websites to complex enterprise applications.
+                  I am Jared Mogonchi, a passionate full-stack developer with extensive experience in building web applications
+                  and digital solutions. I've worked on various projects including cage management systems, rental platforms, 
+                  car hire applications, gym management, spa and salon systems, and sacco systems.
                 </p>
                 
                 <p className="text-gray-700 mb-6">
-                  I specialize in creating responsive, user-friendly interfaces and robust backend systems that 
-                  solve real-world problems. My goal is to deliver high-quality code that is maintainable,
-                  scalable, and provides an excellent user experience.
+                  My technical skills span across HTML, CSS, JavaScript, React, C/C++, Python, Java, and PHP. I focus on creating 
+                  responsive, user-friendly interfaces and robust backend systems that solve real-world problems.
                 </p>
                 
                 <div className="flex flex-wrap gap-4">
