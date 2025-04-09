@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ChevronDown, Code, Server, Globe, PenTool, ArrowRight } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
@@ -7,28 +8,28 @@ import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
 import { Link } from 'react-router-dom';
 
-// Sample project data
+// Sample project data with technologies matching Jared's skills
 const featuredProjects = [
   {
     id: 'cage-system',
     title: 'Cage Management System',
     description: 'An advanced system for managing livestock cages with tracking and analytics features.',
     image: 'https://images.unsplash.com/photo-1586528116493-a029325540fa?q=80&w=500',
-    tags: ['React', 'Node.js', 'MongoDB']
+    tags: ['React', 'PHP', 'MySQL']
   },
   {
     id: 'rentconnect',
     title: 'RentConnect Website',
     description: 'A platform connecting landlords and tenants with seamless property management features.',
     image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=500',
-    tags: ['Next.js', 'Express', 'PostgreSQL']
+    tags: ['JavaScript', 'HTML/CSS', 'Python']
   },
   {
     id: 'car-hire',
     title: 'Car Hire Application',
     description: 'A comprehensive car rental solution with booking, payment, and fleet management capabilities.',
     image: 'https://images.unsplash.com/photo-1550355291-bbee04a92027?q=80&w=500',
-    tags: ['React Native', 'Firebase', 'Stripe']
+    tags: ['Java', 'C++', 'React Native']
   }
 ];
 
@@ -36,12 +37,12 @@ const skills = [
   {
     icon: <Code size={36} />,
     title: 'Frontend Development',
-    description: 'Creating responsive, interactive interfaces using modern web technologies like React, Next.js, and Tailwind CSS.'
+    description: 'Creating responsive, interactive interfaces using modern web technologies like HTML, CSS, JavaScript and React.'
   },
   {
     icon: <Server size={36} />,
     title: 'Backend Development',
-    description: 'Building robust server-side applications with Node.js, Express, and database technologies including MongoDB and PostgreSQL.'
+    description: 'Building robust server-side applications with PHP, Python, Java, and database technologies like MySQL.'
   },
   {
     icon: <Globe size={36} />,
@@ -50,8 +51,8 @@ const skills = [
   },
   {
     icon: <PenTool size={36} />,
-    title: 'UI/UX Design',
-    description: 'Designing intuitive and engaging user experiences with a focus on usability and modern aesthetics.'
+    title: 'Software Engineering',
+    description: 'Creating sophisticated software solutions using C/C++, Java and Python with best practices in software architecture.'
   }
 ];
 

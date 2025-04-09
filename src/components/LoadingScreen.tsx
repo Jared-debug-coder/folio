@@ -6,19 +6,20 @@ const LoadingScreen = ({ onLoadingComplete }: { onLoadingComplete: () => void })
   const [progress, setProgress] = useState(0);
   
   useEffect(() => {
+    // Simulate loading with a slightly slower pace to ensure users see the animation
     const timer = setInterval(() => {
       setProgress(prev => {
-        const newProgress = prev + Math.floor(Math.random() * 8) + 1;
+        const newProgress = prev + Math.floor(Math.random() * 5) + 1;
         if (newProgress >= 100) {
           clearInterval(timer);
           setTimeout(() => {
             onLoadingComplete();
-          }, 800); // Wait 800ms after reaching 100% before completing
+          }, 1000); // Wait 1s after reaching 100% before completing
           return 100;
         }
         return newProgress;
       });
-    }, 180);
+    }, 200);
     
     return () => clearInterval(timer);
   }, [onLoadingComplete]);
@@ -53,6 +54,29 @@ const LoadingScreen = ({ onLoadingComplete }: { onLoadingComplete: () => void })
         <div className="flex items-center justify-between">
           <p className="text-gray-400">Loading assets</p>
           <p className="text-green-500 font-bold">{progress}%</p>
+        </div>
+        
+        <div className="mt-6 overflow-hidden h-8">
+          <motion.div
+            initial={{ y: 50 }}
+            animate={{ y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+          >
+            <motion.div
+              animate={{ 
+                opacity: [0, 1, 1, 0],
+                y: [10, 0, 0, -10]
+              }}
+              transition={{ 
+                duration: 3, 
+                repeat: Infinity,
+                repeatDelay: 0.5
+              }}
+              className="text-gray-300"
+            >
+              Building something amazing for you...
+            </motion.div>
+          </motion.div>
         </div>
       </motion.div>
     </motion.div>
