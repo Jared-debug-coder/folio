@@ -4,6 +4,7 @@ import HeroSection from '../components/HeroSection';
 import ProjectCard from '../components/ProjectCard';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import ScrollToTop from '../components/ScrollToTop';
 import { Link } from 'react-router-dom';
 
 // Sample project data
@@ -54,7 +55,11 @@ const skills = [
   }
 ];
 
-const Index = () => {
+interface IndexProps {
+  guestName?: string;
+}
+
+const Index: React.FC<IndexProps> = ({ guestName = 'My Guest' }) => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -65,36 +70,36 @@ const Index = () => {
   return (
     <>
       <Navbar />
-      <main>
-        <HeroSection />
+      <main className="bg-black text-white">
+        <HeroSection guestName={guestName} />
         
         <div className="text-center mb-16">
           <button 
             onClick={() => scrollToSection('skills')}
-            className="animate-bounce inline-flex items-center justify-center w-12 h-12 rounded-full bg-white shadow-md hover:shadow-lg transition-shadow"
+            className="animate-bounce inline-flex items-center justify-center w-12 h-12 rounded-full bg-green-500 text-white shadow-md hover:shadow-lg transition-shadow"
             aria-label="Scroll down"
           >
-            <ChevronDown size={24} className="text-portfolio-burgundy" />
+            <ChevronDown size={24} />
           </button>
         </div>
         
         {/* Skills Section */}
-        <section id="skills" className="section-padding bg-gray-50">
+        <section id="skills" className="section-padding bg-gray-900">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-portfolio-navy mb-4">My Expertise</h2>
-              <div className="h-1 w-20 bg-portfolio-burgundy mx-auto"></div>
+              <h2 className="text-3xl font-bold text-white mb-4">My Expertise</h2>
+              <div className="h-1 w-20 bg-green-500 mx-auto"></div>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {skills.map((skill, index) => (
                 <div 
                   key={index} 
-                  className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow"
+                  className="bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow border border-gray-700"
                 >
-                  <div className="text-portfolio-burgundy mb-4">{skill.icon}</div>
-                  <h3 className="text-xl font-bold mb-3 text-portfolio-navy">{skill.title}</h3>
-                  <p className="text-gray-600">{skill.description}</p>
+                  <div className="text-green-500 mb-4">{skill.icon}</div>
+                  <h3 className="text-xl font-bold mb-3 text-white">{skill.title}</h3>
+                  <p className="text-gray-400">{skill.description}</p>
                 </div>
               ))}
             </div>
@@ -102,12 +107,12 @@ const Index = () => {
         </section>
         
         {/* Featured Projects Section */}
-        <section className="section-padding">
+        <section className="section-padding bg-black">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-portfolio-navy mb-4">Featured Projects</h2>
-              <div className="h-1 w-20 bg-portfolio-burgundy mx-auto mb-4"></div>
-              <p className="text-gray-600 max-w-2xl mx-auto">
+              <h2 className="text-3xl font-bold text-white mb-4">Featured Projects</h2>
+              <div className="h-1 w-20 bg-green-500 mx-auto mb-4"></div>
+              <p className="text-gray-400 max-w-2xl mx-auto">
                 Explore some of my recent work. Each project represents unique challenges and solutions.
               </p>
             </div>
@@ -128,7 +133,7 @@ const Index = () => {
             <div className="text-center mt-12">
               <Link 
                 to="/projects" 
-                className="btn-gradient px-8 py-3 rounded-full font-medium inline-flex items-center"
+                className="bg-green-500 hover:bg-green-600 text-black px-8 py-3 rounded-full font-medium inline-flex items-center"
               >
                 View All Projects <ArrowRight size={18} className="ml-2" />
               </Link>
@@ -137,7 +142,7 @@ const Index = () => {
         </section>
         
         {/* CTA Section */}
-        <section className="section-padding bg-portfolio-navy text-white">
+        <section className="section-padding bg-gray-900 text-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Let's Work Together</h2>
             <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -146,7 +151,7 @@ const Index = () => {
             </p>
             <Link
               to="/contact"
-              className="px-8 py-3 rounded-full font-medium bg-transparent border-2 border-white hover:bg-white hover:text-portfolio-navy transition-colors inline-flex items-center"
+              className="px-8 py-3 rounded-full font-medium bg-transparent border-2 border-green-500 text-green-500 hover:bg-green-500 hover:text-black transition-colors inline-flex items-center"
             >
               Get In Touch <ArrowRight size={18} className="ml-2" />
             </Link>
@@ -154,6 +159,7 @@ const Index = () => {
         </section>
       </main>
       <Footer />
+      <ScrollToTop />
     </>
   );
 };
