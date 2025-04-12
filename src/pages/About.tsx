@@ -18,36 +18,33 @@ const About = () => {
 
   const experiences = [
     {
-      title: 'Senior Full Stack Developer',
-      company: 'Tech Solutions Inc.',
-      period: '2022 - Present',
+      title: 'Frontend Developer',
+      company: 'Bytech agency.',
+      period: '2024 - Present',
       description: 'Leading development of enterprise web applications, mentoring junior developers, and implementing DevOps practices.'
     },
+   
+    
     {
-      title: 'Full Stack Developer',
-      company: 'Digital Innovations',
-      period: '2020 - 2022',
-      description: 'Developed and maintained multiple client projects, implementing responsive designs and RESTful APIs.'
-    },
-    {
-      title: 'Frontend Developer',
-      company: 'Web Creators',
-      period: '2018 - 2020',
-      description: 'Created responsive user interfaces and interactive web experiences for various client projects.'
-    }
+      title: 'Freelance Developer',
+      company: 'Self-employed',
+      period: '2023 - Present',
+      description: 'Worked on various freelance projects, including e-commerce sites, portfolio websites, and custom web applications.'
+    } 
+
   ];
 
   const education = [
     {
-      degree: 'BSc in Computer Science',
-      institution: 'University of Technology',
-      period: '2015 - 2018',
+      degree: 'Diploma in Information Technology',
+      institution: 'Kasarani KTVC',
+      period: '2022 - 2025',
       description: 'Specialized in software engineering with focus on web technologies and databases.'
     },
     {
-      degree: 'Full Stack Web Development',
-      institution: 'Tech Academy',
-      period: '2019',
+      degree: 'Full Stack Software Engineering',
+      institution: 'Moringa School',
+      period: '2024',
       description: 'Intensive bootcamp covering modern web development technologies and practices.'
     }
   ];
@@ -64,7 +61,7 @@ const About = () => {
                 <div className="relative">
                   <div className="absolute -top-4 -left-4 w-full h-full border-4 border-portfolio-gold rounded-3xl"></div>
                   <img 
-                    src="/lovable-uploads/d0809b5c-d39c-4370-a690-d6f560c4fc01.png" 
+                    src="/uploads/image3.png" 
                     alt="Professional portrait" 
                     className="rounded-3xl w-full h-auto relative z-10 object-cover shadow-xl"
                   />

@@ -1,9 +1,9 @@
 
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { ArrowLeft, ExternalLink, Github } from 'lucide-react';
+import { ArrowLeft, ExternalLink } from 'lucide-react';
 import ScrollToTop from '../components/ScrollToTop';
 
 interface ProjectData {
@@ -30,10 +30,10 @@ const ProjectDetail = () => {
     {
       id: 'cage-system',
       title: 'Cage Management System',
-      description: 'An advanced system for managing livestock cages with tracking and analytics features.',
-      longDescription: 'The Cage Management System is a comprehensive solution designed for livestock farmers and agricultural businesses to efficiently manage their cage operations. The system provides real-time monitoring, automated feeding schedules, inventory management, and detailed analytics to optimize productivity and animal welfare.',
-      image: 'https://images.unsplash.com/photo-1586528116493-a029325540fa?q=80&w=1000',
-      tags: ['React', 'Node.js', 'MongoDB'],
+      description: 'An advanced system for managing chiken cages with tracking and analytics features.',
+      longDescription: 'The Cage Management System is a comprehensive solution designed for chiken farmers and agricultural businesses to efficiently manage their cage operations. The system provides real-time monitoring, automated feeding schedules, inventory management, and detailed analytics to optimize productivity and animal welfare.',
+      image: '/uploads/cage1.png', 
+      tags: ['React', 'Java', 'Mysql'],
       features: [
         'Real-time monitoring of cage conditions',
         'Automated feeding schedule management',
@@ -371,16 +371,7 @@ const ProjectDetail = () => {
                       </a>
                     )}
                     
-                    {project.githubUrl && (
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-full py-3 rounded-lg font-medium bg-gray-700 text-gray-200 hover:bg-gray-600 transition-colors inline-flex items-center justify-center"
-                      >
-                        View Source <Github size={18} className="ml-2" />
-                      </a>
-                    )}
+                  
                     
                     <div className="pt-6 border-t border-gray-700">
                       <h4 className="font-medium text-white mb-3">Technologies</h4>

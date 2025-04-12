@@ -12,8 +12,8 @@ const Projects = () => {
       id: 'cage-system',
       title: 'Cage Management System',
       description: 'An advanced system for managing livestock cages with tracking and analytics features. Includes inventory management, scheduling, and reporting capabilities.',
-      image: 'https://images.unsplash.com/photo-1586528116493-a029325540fa?q=80&w=500',
-      tags: ['React', 'Node.js', 'MongoDB'],
+      image: '/uploads/cage1.png', 
+      tags: ['React', 'Java', 'Mysql'],
       category: 'web'
     },
     {

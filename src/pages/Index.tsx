@@ -14,7 +14,7 @@ const featuredProjects = [
     id: 'cage-system',
     title: 'Cage Management System',
     description: 'An advanced system for managing livestock cages with tracking and analytics features.',
-    image: 'https://images.unsplash.com/photo-1586528116493-a029325540fa?q=80&w=500',
+    image: '/uploads/cage1.png',
     tags: ['React', 'PHP', 'MySQL']
   },
   {

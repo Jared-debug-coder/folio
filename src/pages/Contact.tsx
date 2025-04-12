@@ -71,7 +71,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-medium text-portfolio-navy mb-1">Email</h3>
-                        <p className="text-gray-600">contact@devportfolio.com</p>
+                        <p className="text-gray-600">ombongijared2@gmail.com</p>
                       </div>
                     </div>
                     
@@ -98,7 +98,7 @@ const Contact = () => {
                   
                   <div className="mt-8">
                     <img 
-                      src="/lovable-uploads/abe21c74-87c4-40cc-aca9-cfa65318b927.png" 
+                      src="/uploads/image2.png" 
                       alt="Professional portrait" 
                       className="rounded-lg w-full object-cover shadow"
                     />

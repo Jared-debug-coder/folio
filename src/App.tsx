@@ -1,5 +1,4 @@
-
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -19,24 +18,11 @@ const queryClient = new QueryClient();
 const App = () => {
   const [loading, setLoading] = useState(true);
   const [showWelcome, setShowWelcome] = useState(false);
-  const [guestName, setGuestName] = useState<string>('My Guest');
-
-  useEffect(() => {
-    // Check if this is the first visit
-    const hasVisited = localStorage.getItem('hasVisited');
-    
-    if (!hasVisited) {
-      // First time visitor logic
-      localStorage.setItem('hasVisited', 'true');
-    } else {
-      // Skip loading for returning visitors
-      setLoading(false);
-    }
-  }, []);
+  const [guestName, setGuestName] = useState<string>("My Guest");
 
   const handleLoadingComplete = () => {
     setLoading(false);
-    setShowWelcome(true);
+    setShowWelcome(true); // Always show welcome dialog after loading
   };
 
   const handleGuestNameSet = (name: string) => {
@@ -48,17 +34,17 @@ const App = () => {
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        
+
         {loading && <LoadingScreen onLoadingComplete={handleLoadingComplete} />}
-        
+
         {!loading && (
           <>
-            <WelcomeDialog 
-              open={showWelcome} 
-              onOpenChange={setShowWelcome} 
-              onGuestNameSet={handleGuestNameSet} 
+            <WelcomeDialog
+              open={showWelcome}
+              onOpenChange={setShowWelcome}
+              onGuestNameSet={handleGuestNameSet}
             />
-            
+
             <BrowserRouter>
               <Routes>
                 <Route path="/" element={<Index guestName={guestName} />} />
