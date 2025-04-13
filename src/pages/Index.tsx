@@ -13,9 +13,9 @@ const featuredProjects = [
   {
     id: 'cage-system',
     title: 'Cage Management System',
-    description: 'An advanced system for managing livestock cages with tracking and analytics features.',
+    description: 'An advanced system for managing layers chiken  with tracking and analytics features.',
     image: '/uploads/cage1.png',
-    tags: ['React', 'PHP', 'MySQL']
+    tags: ['React', 'Java', 'MySQL']
   },
   {
     id: 'rentconnect',
